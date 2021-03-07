@@ -161,6 +161,7 @@ namespace ExtraRolesMod
                 ("Officer", Main.Palette.officerColor, Main.Config.showOfficer),
                 ("Engineer", Main.Palette.engineerColor, Main.Config.showEngineer),
                 ("Joker", Main.Palette.jokerColor, Main.Config.showJoker),
+                ("Mayor", Main.Palette.mayorColor, Main.Config.showMayor)
             };
 
             // Color of imposters and crewmates

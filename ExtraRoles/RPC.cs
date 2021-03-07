@@ -43,6 +43,7 @@ namespace ExtraRolesMod
 
     enum CustomRPC
     {
+        SetMayor = 42,
         SetMedic = 43,
         SetProtected = 44,
         SetOfficer = 46,
@@ -104,6 +105,9 @@ namespace ExtraRolesMod
                     crewmates.RemoveAll(x => x.Data.IsImpostor);
                     foreach (var plr in crewmates)
                         plr.getModdedControl().Role = "Crewmate";
+                    break;
+                case (byte)CustomRPC.SetMayor:
+                    setRole("Mayor");
                     break;
                 case (byte) CustomRPC.SetMedic:
                     setRole("Medic");

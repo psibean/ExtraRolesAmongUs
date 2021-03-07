@@ -1,5 +1,4 @@
 ﻿using HarmonyLib;
-using Hazel;
 using System.Collections.Generic;
 using System.Linq;
 using UnhollowerBaseLib;
@@ -41,6 +40,7 @@ namespace ExtraRolesMod
                 ("Officer", HarmonyMain.officerSpawnChance.GetValue(), CustomRPC.SetOfficer),
                 ("Engineer", HarmonyMain.engineerSpawnChance.GetValue(), CustomRPC.SetEngineer),
                 ("Joker", HarmonyMain.jokerSpawnChance.GetValue(), CustomRPC.SetJoker),
+                ("Mayor", HarmonyMain.mayorSpawnChance.GetValue(), CustomRPC.SetMayor)
             };
 
             while (roles.Count > 0 && crewmates.Count > HarmonyMain.minimumCrewmateCount.GetValue())

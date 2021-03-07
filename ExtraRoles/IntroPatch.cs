@@ -58,6 +58,14 @@ namespace ExtraRolesMod
                 __instance.__this.ImpostorText.Text = "Get voted off of the ship to win";
                 __instance.__this.BackgroundBar.material.color = Main.Palette.jokerColor;
             }
+
+            if (PlayerControl.LocalPlayer.isPlayerRole("Mayor"))
+            {
+                __instance.__this.Title.Text = "Mayor";
+                __instance.__this.Title.Color = Main.Palette.mayorColor;
+                __instance.__this.ImpostorText.Text = "Your vote counts twice";
+                __instance.__this.BackgroundBar.material.color = Main.Palette.mayorColor;
+            }
         }
     }
 }
