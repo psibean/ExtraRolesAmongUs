@@ -131,7 +131,7 @@ namespace ExtraRoles
                 return;
 
             var writer = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId,
-                (byte) CustomRPC.JokerWin, Hazel.SendOption.None, -1);
+                (byte) CustomRPC.JokerWin, Hazel.SendOption.Reliable, -1);
             AmongUsClient.Instance.FinishRpcImmediately(writer);
 
             foreach (var player in PlayerControl.AllPlayerControls)
