@@ -96,7 +96,8 @@ If this setting is enabled, The Mayor's name will be lit up purple for everyone.
 
 ## Minimum Crewmate Count
 *Default: 0*<br />
-The minimum number of crewmates there should be, roles are set in a random order.
+The minimum number of crewmates there should be, roles are set in a random order. 
+If you have 10 people, 3 imposters all roles at 100%
 
 ## Medic Spawn Chance
 *Default: 100*<br/>
@@ -142,4 +143,4 @@ https://github.com/Impostor/Impostor For running a non-official server. (current
 https://github.com/DorCoMaNdO/Reactor-Essentials For creating custom game options easily.  
 https://github.com/Woodi-dev/Among-Us-Sheriff-Mod For code snippets.  
 https://github.com/tomozbot/SweeperMod For code snippets.  
-https://github.com/niyati384/MayorMod For the Mayor Role.
+https://github.com/tomozbot/MayorMod For the Mayor Role.
