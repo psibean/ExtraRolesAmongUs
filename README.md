@@ -27,6 +27,9 @@ The Joker is interesting; they aren't part of the Crewmates **or** Impostors, an
 If The Joker get's voted off the ship, the game will end instantly.
 The Joker also has no tasks.
 
+## Mayor
+When the mayor votes their vote counts for two! The mayors additional vote will be displayed as the last vote on a player and will be purple.
+
 # Installation
 
 Here's a quick video if you can't be bothered to read the steps: https://youtu.be/gtuqYsdir_k  
@@ -78,7 +81,7 @@ If this setting is enabled, The Jokers's name will be lit up grey for everyone. 
 ## Joker Can Die To Officer
 *Default: true*<br/>
 If this setting is enabled, The Officer will be able to kill The Joker without repercussion. If it's disabled, killing The Joker will execute as if they were a Crewmate.
-  
+
 ### Time Where Medic Reports Will Have Name
 *Default: 5*<br/>
 The amount of time (in seconds) that The Medic will have to report the body since death to get the killer's name.
@@ -88,9 +91,13 @@ The amount of time (in seconds) that The Medic will have to report the body sinc
 The amount of time (in seconds) that The Medic will have to report the body since death to get the killer's color type.  
 "color type" means either "lighter" or "darker", and a full list of colors and their types are included at the bottom of the page.  
 
+## Show Mayor
+If this setting is enabled, The Mayor's name will be lit up purple for everyone. If it isn't, it will only be lit for themselves.
+
 ## Minimum Crewmate Count
 *Default: 0*<br />
-The minimum number of crewmates there should be, roles are set in a random order.
+The minimum number of crewmates there should be, roles are set in a random order. 
+If you have 10 people, 3 imposters all roles at 100%
 
 ## Medic Spawn Chance
 *Default: 100*<br/>
@@ -106,7 +113,11 @@ The percentage chance that anybody in the game will become The Engineer.
   
 ## Joker Spawn Chance
 *Default: 100*<br/>
-The percentage chance that anybody in the game will become The Joker.  
+The percentage chance that anybody in the game will become The Joker.
+
+## Mayor Spawn Chance
+*Default: 100*<br />
+The percentage chance that anybody in the game will become The Mayor.
 
 # Color Types
 Red is darker.  
@@ -132,3 +143,4 @@ https://github.com/Impostor/Impostor For running a non-official server. (current
 https://github.com/DorCoMaNdO/Reactor-Essentials For creating custom game options easily.  
 https://github.com/Woodi-dev/Among-Us-Sheriff-Mod For code snippets.  
 https://github.com/tomozbot/SweeperMod For code snippets.  
+https://github.com/tomozbot/MayorMod For the Mayor Role.

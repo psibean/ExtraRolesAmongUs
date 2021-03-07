@@ -30,6 +30,7 @@ namespace ExtraRolesMod
         public static CustomToggleOption showOfficer = CustomOption.AddToggle("Show Officer", false);
         public static CustomToggleOption showEngineer = CustomOption.AddToggle("Show Engineer", false);
         public static CustomToggleOption showJoker = CustomOption.AddToggle("Show Joker", false);
+        public static CustomToggleOption showMayor = CustomOption.AddToggle("Show Mayor", false);
 
         public static CustomStringOption showShieldedPlayer = CustomOption.AddString("Show Shielded Player",
             new[] {"Self", "Medic", "Self+Medic", "Everyone"});
@@ -65,6 +66,9 @@ namespace ExtraRolesMod
 
         public static CustomNumberOption
             jokerSpawnChance = CustomOption.AddNumber("Joker Spawn Chance", 100, 0, 100, 5);
+        
+        public static CustomNumberOption
+            mayorSpawnChance = CustomOption.AddNumber("Mayor Spawn Chance", 100, 0, 100, 5);
 
         public ConfigEntry<string> Ip { get; set; }
         public ConfigEntry<ushort> Port { get; set; }

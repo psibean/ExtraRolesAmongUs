@@ -1,5 +1,4 @@
 ﻿using HarmonyLib;
-using Hazel;
 using System.Collections.Generic;
 using System.Linq;
 using UnhollowerBaseLib;
@@ -16,7 +15,7 @@ namespace ExtraRolesMod
             Main.Logic.AllModPlayerControl.Clear();
             killedPlayers.Clear();
             var writer = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId,
-                (byte) CustomRPC.ResetVaribles, Hazel.SendOption.None, -1);
+                (byte) CustomRPC.ResetVaribles, Hazel.SendOption.Reliable, -1);
             AmongUsClient.Instance.FinishRpcImmediately(writer);
 
             var crewmates = PlayerControl.AllPlayerControls.ToArray().ToList();
@@ -41,6 +40,7 @@ namespace ExtraRolesMod
                 ("Officer", HarmonyMain.officerSpawnChance.GetValue(), CustomRPC.SetOfficer),
                 ("Engineer", HarmonyMain.engineerSpawnChance.GetValue(), CustomRPC.SetEngineer),
                 ("Joker", HarmonyMain.jokerSpawnChance.GetValue(), CustomRPC.SetJoker),
+                ("Mayor", HarmonyMain.mayorSpawnChance.GetValue(), CustomRPC.SetMayor)
             };
 
             while (roles.Count > 0 && crewmates.Count > HarmonyMain.minimumCrewmateCount.GetValue())
@@ -60,7 +60,7 @@ namespace ExtraRolesMod
                     System.Console.WriteLine($"Spawning {roleName} with PlayerID = {playerIdForRole}");
 
                     writer = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId,
-                        (byte)rpc, Hazel.SendOption.None, -1);
+                        (byte)rpc, Hazel.SendOption.Reliable, -1);
                     writer.Write(playerIdForRole);
                     AmongUsClient.Instance.FinishRpcImmediately(writer);
                 }
@@ -79,7 +79,7 @@ namespace ExtraRolesMod
             }
 
             writer = AmongUsClient.Instance.StartRpcImmediately(PlayerControl.LocalPlayer.NetId,
-                (byte) CustomRPC.SetLocalPlayers, Hazel.SendOption.None, -1);
+                (byte) CustomRPC.SetLocalPlayers, Hazel.SendOption.Reliable, -1);
             writer.WriteBytesAndSize(localPlayers.Select(player => player.PlayerId).ToArray());
             AmongUsClient.Instance.FinishRpcImmediately(writer);
         }

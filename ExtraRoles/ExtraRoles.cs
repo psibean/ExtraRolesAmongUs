@@ -185,6 +185,7 @@ namespace ExtraRolesMod
 
         public class ModdedPalette
         {
+            public Color mayorColor = new Color(0.44f, 0.31f, 0.66f, 1f);
             public Color medicColor = new Color(36f / 255f, 183f / 255f, 32f / 255f, 1);
             public Color officerColor = new Color(0, 40f / 255f, 198f / 255f, 1);
             public Color engineerColor = new Color(255f / 255f, 165f / 255f, 10f / 255f, 1);
@@ -214,11 +215,13 @@ namespace ExtraRolesMod
             public bool showEngineer { get; set; }
             public bool showJoker { get; set; }
             public bool jokerCanDieToOfficer { get; set; }
+            public bool showMayor { get; set; }
             public float minimumCrewmateCount { get; set; }
             public float medicSpawnChance { get; set; }
             public float engineerSpawnChance { get; set; }
             public float officerSpawnChance { get; set; }
             public float jokerSpawnChance { get; set; }
+            public float mayorSpawnChance { get; set; }
 
             public void SetConfigSettings()
             {
@@ -233,11 +236,13 @@ namespace ExtraRolesMod
                 this.showEngineer = HarmonyMain.showEngineer.GetValue();
                 this.showJoker = HarmonyMain.showJoker.GetValue();
                 this.jokerCanDieToOfficer = HarmonyMain.jokerCanDieToOfficer.GetValue();
+                this.showMayor = HarmonyMain.showMayor.GetValue();
                 this.minimumCrewmateCount = HarmonyMain.minimumCrewmateCount.GetValue();
                 this.medicSpawnChance = HarmonyMain.medicSpawnChance.GetValue();
                 this.engineerSpawnChance = HarmonyMain.engineerSpawnChance.GetValue();
                 this.officerSpawnChance = HarmonyMain.officerSpawnChance.GetValue();
                 this.jokerSpawnChance = HarmonyMain.jokerSpawnChance.GetValue();
+                this.mayorSpawnChance = HarmonyMain.mayorSpawnChance.GetValue();
             }
         }
 
